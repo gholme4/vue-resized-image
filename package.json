@@ -1,7 +1,7 @@
 {
   "name": "vue-resized-image",
   "description": "A Vue JS component that dynamically resizes, crops, and displays images",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "George Holmes",
     "email": "george@georgeholmesii.com"

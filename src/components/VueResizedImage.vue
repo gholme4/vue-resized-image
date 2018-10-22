@@ -10,8 +10,6 @@ export default {
 	props: ['src', 'alt', 'width', 'height', 'crop'],
 	data: () => {
 		return {
-			canvas: null,
-			ctx: null,
 			resizedSrc: null
 		}
 	},
