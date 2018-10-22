@@ -14,17 +14,6 @@ npm install --save vue-resized-image
 
 ## Default import
 
-Install all the components:
-
-```javascript
-import Vue from 'vue'
-import { VueResizedImage } from 'vue-resized-image'
-
-Vue.use(VueResizedImage)
-```
-
-Use specific components:
-
 ```javascript
 import Vue from 'vue'
 import { VueResizedImage } from 'vue-resized-image'
@@ -34,16 +23,6 @@ Vue.component('resized-image', VueResizedImage)
 
 
 ## Distribution import
-
-Install all the components:
-
-```javascript
-import VueResizedImage from 'vue-resized-image/dist/vue-resized-image.common'
-
-Vue.use(VueResizedImage)
-```
-
-Use specific components:
 
 ```javascript
 import { VueResizedImage } from 'vue-resized-image/dist/vue-resized-image.common'
@@ -82,12 +61,31 @@ Vue.use(VueResizedImage)
 
 # Usage
 
-> TODO
+This component wraps an `img` tag to display an image dynamically resized in the browser making use of the canvas API. The width and height of the resized image can be defined. If the crop option is set to true the image is automatically centered within the defined dimensions and the original image aspect ratio is retained.
 
 # Example
 
-> TODO
+In `app.js`
+```
+import { VueResizedImage } 'vue-resized-image';
+Vue.component('resized-image', VueResizedImage);
+```
 
+Use in another component:
+```
+<template>
+	<div id="single">
+		<h1 v-html="title"></h1>
+				<figure>
+	                <resized-image :crop="true" :width="800" :height="400" :src="featured_image" :alt="title"/>
+	            </figure>
+	            <article v-html="content"></article>
+			</div>
+		</div>
+	</div>
+</template>
+
+```
 ---
 
 # Plugin Development
